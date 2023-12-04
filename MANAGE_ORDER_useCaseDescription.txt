@@ -1,1 +1,27 @@
+						 USE CASES DESCRIPTION
 
+Use Case 1 Name: Manage Orders
+Primary Actor: Admin
+
+Description:
+Admin will be able to perform the following actions:
+
+1. View Orders:
+The admin accesses the "Manage Orders" section from the admin dashboard.
+The system retrieves a list of existing orders.
+
+2. Search Orders:
+The admin can filter and search orders based on customer name, order date, etc.
+
+3. View Order Details:
+The admin selects a specific order to view detailed information.
+
+4. Update Order Status:
+The admin has the option to update the status of an order (e.g., processing, shipped, delivered, canceled).
+
+5. Manage Inventory:
+Upon changing the order status to "shipped" or "delivered," the system automatically updates the inventory levels, decrementing the quantity of sold items.
+
+6. Generate and Send Invoices:
+The admin can generate and send invoices to customers for completed orders.
+The system logs the invoice information and sends it to the respective customers.
