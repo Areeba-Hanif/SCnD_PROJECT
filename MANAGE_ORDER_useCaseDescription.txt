@@ -1,1 +1,20 @@
+USE CASE 2) MANAGE CUSTOMERS: 
+The Manage Customers use case for our e-commerce website improves customer interactions 
+and the handling of customer information. Folloing are the features of this use case.
+
+1)Add New Customers:
+->In this we can add new customers to the system.
+
+2)Delete Customers and Records:
+->In this we can delete customers and their records from the system.
+
+3)Search for Specific Customers:
+->It Allows to search for a particular customer based on records (e.g: name, email).
+
+4)Access Complete List of Registered Customers:
+->In this we can get a list of all registered customers in the system.
+
+5)Edit Customer Information:
+->In this we can easily modify the customer details (e.g: address, contact no, etc).
+ 
 
