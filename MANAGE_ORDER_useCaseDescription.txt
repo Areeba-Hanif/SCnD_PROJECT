@@ -46,3 +46,28 @@ and the handling of customer information. Folloing are the features of this use 
 
 5)Edit Customer Information:
 ->In this we can easily modify the customer details (e.g: address, contact no, etc).
+
+
+USE CASE 3 NAME : ORDER FULFILLMENT 
+
+Order fulfillment use case in e-commerce managing the following steps:
+
+Order Placement and Verification: 
+1. The administrative assistant receives customer orders to start the process.
+2. The administrator carefully examines and confirms orders to make sure they are accurate and the item is available.
+
+Warehouse Operations :
+1.Orders that are packed are labeled with the courier service's shipment information.
+
+Shipping and Tracking: 
+1. The administrator keeps an eye on the shipment procedure and gives clients up-to-date tracking details.
+
+ Delivery and Order Fulfillment: 
+1. The administrator logs orders into the system as fulfilled after a successful delivery.
+
+ Returns and Problem Solving: 
+1. The administrative assistant carries out the required procedures to guarantee client contentment in the event of returns or problems.
+
+ Process Overview: 
+1. The administrator is essential to coordinating a flawless order fulfillment procedure for the apparel buyers on the e-commerce platform.
+
