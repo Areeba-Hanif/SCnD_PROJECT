@@ -10,20 +10,19 @@
     xmlns="http://xml.apache.org/axis/wsdd/"
     xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from InformationService WSDL service -->
+  <!-- Services from ViewAllOrdersService WSDL service -->
 
-  <service name="Information" provider="java:RPC" style="wrapped" use="literal">
+  <service name="ViewAllOrders" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://main"/>
-      <parameter name="wsdlServiceElement" value="InformationService"/>
+      <parameter name="wsdlServiceElement" value="ViewAllOrdersService"/>
       <parameter name="schemaQualified" value="http://main"/>
-      <parameter name="wsdlServicePort" value="Information"/>
-      <parameter name="className" value="main.InformationSoapBindingImpl"/>
-      <parameter name="wsdlPortType" value="Information"/>
+      <parameter name="wsdlServicePort" value="ViewAllOrders"/>
+      <parameter name="className" value="main.ViewAllOrdersSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ViewAllOrders"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation name="getOrderInformation" qname="operNS:getOrderInformation" xmlns:operNS="http://main" returnQName="retNS:getOrderInformationReturn" xmlns:retNS="http://main" returnType="rtns:Order" xmlns:rtns="http://main" soapAction="" >
-        <parameter qname="pns:orderId" xmlns:pns="http://main" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      <operation name="getOrders" qname="operNS:getOrders" xmlns:operNS="http://main" returnQName="retNS:getOrdersReturn" xmlns:retNS="http://main" returnType="rtns:Order" xmlns:rtns="http://main" soapAction="" >
       </operation>
-      <parameter name="allowedMethods" value="getOrderInformation"/>
+      <parameter name="allowedMethods" value="getOrders"/>
 
       <typeMapping
         xmlns:ns="http://main"
