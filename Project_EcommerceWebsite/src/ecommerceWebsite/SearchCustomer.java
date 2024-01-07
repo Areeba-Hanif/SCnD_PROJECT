@@ -7,7 +7,7 @@ public class SearchCustomer {
 	public String searchCustomerInfo(String CustomerID) {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommercedb","root","");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommercehubdb","root","");
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from customers inner join accounts on customers.CustomerID = accounts.CustomerID where customers.CustomerID='"+CustomerID+"';");
 			
