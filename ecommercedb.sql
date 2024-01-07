@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2023 at 09:19 AM
+-- Generation Time: Jan 06, 2024 at 07:25 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `AccountID` int(11) NOT NULL,
-  `CustomerID` int(11) NOT NULL,
+  `CustomerID` varchar(50) NOT NULL,
   `AccountCreationDate` date NOT NULL,
   `PaymentMethod` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -39,8 +39,11 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`AccountID`, `CustomerID`, `AccountCreationDate`, `PaymentMethod`) VALUES
-(1, 1, '2017-09-20', 'cash '),
-(2, 2, '2019-05-24', 'card');
+(1, 'c1', '2017-09-20', 'cash '),
+(2, 'c2', '2019-05-24', 'card'),
+(3, 'c4', '2020-12-09', 'card'),
+(4, 'c5', '2018-08-14', 'cash '),
+(5, 'c3', '2019-03-12', 'cash ');
 
 -- --------------------------------------------------------
 
@@ -61,7 +64,7 @@ CREATE TABLE `categories` (
 --
 
 CREATE TABLE `customers` (
-  `CustomerID` int(11) NOT NULL,
+  `CustomerID` varchar(50) NOT NULL,
   `FirstName` varchar(50) NOT NULL,
   `LastName` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -76,8 +79,11 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`CustomerID`, `FirstName`, `LastName`, `Email`, `PhoneNumber`, `Address`, `Gender`, `Status`) VALUES
-(1, 'areeba', 'khalid', 'areeba2@gmail.com', 333123456, 'house 123 shah faisal colony', 'female', 'active'),
-(2, 'maham', 'arif', 'maham@gmail.com', 314253664, 'house 123 sharah-e-faisal', 'female', 'inactive');
+('c1', 'Areeba', 'Khalid', 'Areeba12@gmail.com', 333123456, 'House 123 shah faisal', 'Female', 'Active'),
+('c2', 'Maham', 'Arif', 'Maham@gmail.com', 314253664, 'House 113 sharah-e-faisal', 'Female', 'Inactive'),
+('c3', 'Khalid', 'Waheed', 'Khalid02@gmail.com', 332735466, 'house 456 jauhar', 'Male', 'Active'),
+('c4', 'Areeba', 'Hanif', 'AreebaHanif1@gmail.com', 332763581, 'House 788 malir', 'Female', 'Active'),
+('c5', 'Hassan', 'Majid', 'Hassan55@gmail.com', 332756488, 'House 654 tariq road', 'Male', 'Inactive');
 
 -- --------------------------------------------------------
 
@@ -129,7 +135,7 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `accounts`
   ADD PRIMARY KEY (`AccountID`),
-  ADD KEY `CustomerID` (`CustomerID`);
+  ADD KEY `Foreign Key` (`CustomerID`) USING BTREE;
 
 --
 -- Indexes for table `categories`
@@ -170,19 +176,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `CategoryID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `customers`
---
-ALTER TABLE `customers`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -201,16 +201,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `accounts`
---
-ALTER TABLE `accounts`
-  ADD CONSTRAINT `accounts_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
