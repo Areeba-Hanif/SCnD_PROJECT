@@ -1,5 +1,5 @@
 /**
- * InformationServiceLocator.java
+ * Stock_informationServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package main;
 
-public class InformationServiceLocator extends org.apache.axis.client.Service implements main.InformationService {
+public class Stock_informationServiceLocator extends org.apache.axis.client.Service implements main.Stock_informationService {
 
-    public InformationServiceLocator() {
+    public Stock_informationServiceLocator() {
     }
 
 
-    public InformationServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public Stock_informationServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public InformationServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public Stock_informationServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for information
-    private java.lang.String information_address = "http://localhost:8080/ecommerce_wepsite/services/information";
+    // Use to get a proxy class for stock_information
+    private java.lang.String stock_information_address = "http://localhost:8080/Ecommerce/services/stock_information";
 
-    public java.lang.String getinformationAddress() {
-        return information_address;
+    public java.lang.String getstock_informationAddress() {
+        return stock_information_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String informationWSDDServiceName = "information";
+    private java.lang.String stock_informationWSDDServiceName = "stock_information";
 
-    public java.lang.String getinformationWSDDServiceName() {
-        return informationWSDDServiceName;
+    public java.lang.String getstock_informationWSDDServiceName() {
+        return stock_informationWSDDServiceName;
     }
 
-    public void setinformationWSDDServiceName(java.lang.String name) {
-        informationWSDDServiceName = name;
+    public void setstock_informationWSDDServiceName(java.lang.String name) {
+        stock_informationWSDDServiceName = name;
     }
 
-    public main.Information getinformation() throws javax.xml.rpc.ServiceException {
+    public main.Stock_information getstock_information() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(information_address);
+            endpoint = new java.net.URL(stock_information_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getinformation(endpoint);
+        return getstock_information(endpoint);
     }
 
-    public main.Information getinformation(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public main.Stock_information getstock_information(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            main.InformationSoapBindingStub _stub = new main.InformationSoapBindingStub(portAddress, this);
-            _stub.setPortName(getinformationWSDDServiceName());
+            main.Stock_informationSoapBindingStub _stub = new main.Stock_informationSoapBindingStub(portAddress, this);
+            _stub.setPortName(getstock_informationWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
         }
     }
 
-    public void setinformationEndpointAddress(java.lang.String address) {
-        information_address = address;
+    public void setstock_informationEndpointAddress(java.lang.String address) {
+        stock_information_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (main.Information.class.isAssignableFrom(serviceEndpointInterface)) {
-                main.InformationSoapBindingStub _stub = new main.InformationSoapBindingStub(new java.net.URL(information_address), this);
-                _stub.setPortName(getinformationWSDDServiceName());
+            if (main.Stock_information.class.isAssignableFrom(serviceEndpointInterface)) {
+                main.Stock_informationSoapBindingStub _stub = new main.Stock_informationSoapBindingStub(new java.net.URL(stock_information_address), this);
+                _stub.setPortName(getstock_informationWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("information".equals(inputPortName)) {
-            return getinformation();
+        if ("stock_information".equals(inputPortName)) {
+            return getstock_information();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://main", "informationService");
+        return new javax.xml.namespace.QName("http://main", "stock_informationService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://main", "information"));
+            ports.add(new javax.xml.namespace.QName("http://main", "stock_information"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class InformationServiceLocator extends org.apache.axis.client.Service im
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("information".equals(portName)) {
-            setinformationEndpointAddress(address);
+if ("stock_information".equals(portName)) {
+            setstock_informationEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

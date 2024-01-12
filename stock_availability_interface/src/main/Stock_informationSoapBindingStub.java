@@ -1,5 +1,5 @@
 /**
- * InformationSoapBindingStub.java
+ * Stock_informationSoapBindingStub.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,7 +7,7 @@
 
 package main;
 
-public class InformationSoapBindingStub extends org.apache.axis.client.Stub implements main.Information {
+public class Stock_informationSoapBindingStub extends org.apache.axis.client.Stub implements main.Stock_information {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -36,16 +36,16 @@ public class InformationSoapBindingStub extends org.apache.axis.client.Stub impl
 
     }
 
-    public InformationSoapBindingStub() throws org.apache.axis.AxisFault {
+    public Stock_informationSoapBindingStub() throws org.apache.axis.AxisFault {
          this(null);
     }
 
-    public InformationSoapBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public Stock_informationSoapBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
          this(service);
          super.cachedEndpoint = endpointURL;
     }
 
-    public InformationSoapBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public Stock_informationSoapBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
         if (service == null) {
             super.service = new org.apache.axis.client.Service();
         } else {

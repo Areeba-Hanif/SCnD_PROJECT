@@ -37,7 +37,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:portType name="information">
+   <wsdl:portType name="stock_information">
 
       <wsdl:operation name="getStockInformation">
 
@@ -53,7 +53,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="informationSoapBinding" type="impl:information">
+   <wsdl:binding name="stock_informationSoapBinding" type="impl:stock_information">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
@@ -77,11 +77,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:binding>
 
-   <wsdl:service name="informationService">
+   <wsdl:service name="stock_informationService">
 
-      <wsdl:port binding="impl:informationSoapBinding" name="information">
+      <wsdl:port binding="impl:stock_informationSoapBinding" name="stock_information">
 
-         <wsdlsoap:address location="http://localhost:8080/ecommerce_wepsite/services/information"/>
+         <wsdlsoap:address location="http://localhost:8080/Ecommerce/services/stock_information"/>
 
       </wsdl:port>
 
