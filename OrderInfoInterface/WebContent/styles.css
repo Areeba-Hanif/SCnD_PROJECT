@@ -1,0 +1,39 @@
+body{
+	background-color: #d3ffb3;
+}
+
+h1,h2{
+	font-family:sans-serif;
+	color:  blue;
+}
+
+
+h3{
+	color : red;
+}
+button {
+    background-color: #007bff;
+    font-size: 25px;
+    color: white;
+    padding : 10px
+}
+button:hover{
+    background-color: black;
+    color: white;
+   
+}
+.heading{
+	font-size: 30px;
+	
+}
+input{
+	font-size: 25px;
+}
+
+#result{
+	
+	font-size: 30px;
+}
+
+
+
