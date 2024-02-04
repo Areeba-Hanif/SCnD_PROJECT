@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from InformationService WSDL service -->
+
+  <service name="Information" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://main"/>
+      <parameter name="wsdlServiceElement" value="InformationService"/>
+      <parameter name="schemaQualified" value="http://main"/>
+      <parameter name="wsdlServicePort" value="Information"/>
+      <parameter name="className" value="main.InformationSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Information"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getOrderInformation" qname="operNS:getOrderInformation" xmlns:operNS="http://main" returnQName="retNS:getOrderInformationReturn" xmlns:retNS="http://main" returnType="rtns:Order" xmlns:rtns="http://main" soapAction="" >
+        <parameter qname="pns:orderId" xmlns:pns="http://main" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getOrderInformation"/>
+
+      <typeMapping
+        xmlns:ns="http://main"
+        qname="ns:Order"
+        type="java:main.Order"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
