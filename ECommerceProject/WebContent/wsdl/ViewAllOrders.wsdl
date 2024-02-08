@@ -16,10 +16,10 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    </element>
    <complexType name="Order">
     <sequence>
-     <element name="orderId" type="xsd:int"/>
      <element name="orderDate" nillable="true" type="xsd:string"/>
-     <element name="totalAmount" nillable="true" type="xsd:string"/>
+     <element name="orderId" type="xsd:int"/>
      <element name="orderStatus" nillable="true" type="xsd:string"/>
+     <element name="totalAmount" nillable="true" type="xsd:string"/>
     </sequence>
    </complexType>
   </schema>

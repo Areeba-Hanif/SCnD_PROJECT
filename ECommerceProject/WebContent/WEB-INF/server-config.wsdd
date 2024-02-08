@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -66,11 +66,11 @@
    <ns1:parameter qname="ns5:newOrderStatus" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="updateOrder"/>
-  <ns1:parameter name="wsdlPortType" value="UpdateOrderInformation"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://main"/>
-  <ns1:parameter name="wsdlServicePort" value="UpdateOrderInformation"/>
+  <ns1:parameter name="wsdlPortType" value="UpdateOrderInformation"/>
   <ns1:parameter name="className" value="main.UpdateOrderInformation"/>
+  <ns1:parameter name="wsdlServicePort" value="UpdateOrderInformation"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="UpdateOrderInformationService"/>
  </ns1:service>
@@ -94,11 +94,11 @@
    <ns1:parameter qname="ns7:orderId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="getOrderInformation"/>
-  <ns1:parameter name="wsdlPortType" value="Information"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://main"/>
-  <ns1:parameter name="wsdlServicePort" value="Information"/>
+  <ns1:parameter name="wsdlPortType" value="Information"/>
   <ns1:parameter name="className" value="main.Information"/>
+  <ns1:parameter name="wsdlServicePort" value="Information"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="InformationService"/>
   <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns8:Order" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:main.Order" xmlns:ns8="http://main"/>
@@ -110,11 +110,11 @@
    <ns1:parameter qname="ns9:email" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="signUp"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="SignupService"/>
-  <ns1:parameter name="className" value="main.SignupService"/>
-  <ns1:parameter name="wsdlServicePort" value="SignupService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="SignupService"/>
+  <ns1:parameter name="className" value="main.SignupService"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="SignupServiceService"/>
  </ns1:service>
@@ -124,11 +124,11 @@
    <ns1:parameter qname="ns10:password" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="login"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="LoginService"/>
-  <ns1:parameter name="className" value="main.LoginService"/>
-  <ns1:parameter name="wsdlServicePort" value="LoginService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="LoginService"/>
+  <ns1:parameter name="className" value="main.LoginService"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="LoginServiceService"/>
  </ns1:service>

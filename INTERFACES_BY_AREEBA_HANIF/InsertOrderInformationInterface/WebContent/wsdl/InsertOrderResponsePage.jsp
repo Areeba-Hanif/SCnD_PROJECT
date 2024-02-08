@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="./shop.html">
-                        <i class="fa fa-shopping-bag"></i> Shop</a>
+                        <i class="fas fa-shopping-bag"></i> Shop</a>
                 </li>
                  <li class="nav-item active">
                     <a class="nav-link"  href="./cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
