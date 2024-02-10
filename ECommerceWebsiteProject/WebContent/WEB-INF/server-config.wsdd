@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -25,11 +25,11 @@
  <ns1:service name="ViewAllOrders" provider="java:RPC" style="wrapped" use="literal">
   <ns2:operation name="getOrders" qname="ns1:getOrders" returnQName="ns1:getOrdersReturn" returnType="ns1:Order" soapAction="" xmlns:ns1="http://main" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
   <ns1:parameter name="allowedMethods" value="getOrders"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="ViewAllOrders"/>
-  <ns1:parameter name="className" value="main.ViewAllOrders"/>
-  <ns1:parameter name="wsdlServicePort" value="ViewAllOrders"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="ViewAllOrders"/>
+  <ns1:parameter name="className" value="main.ViewAllOrders"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="ViewAllOrdersService"/>
   <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns2:Order" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:main.Order" xmlns:ns2="http://main"/>
@@ -49,11 +49,11 @@
    <ns1:parameter qname="ns3:orderId" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="getOrderInformation"/>
-  <ns1:parameter name="wsdlPortType" value="RetrieveOrderInformation"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://main"/>
-  <ns1:parameter name="wsdlServicePort" value="RetrieveOrderInformation"/>
+  <ns1:parameter name="wsdlPortType" value="RetrieveOrderInformation"/>
   <ns1:parameter name="className" value="main.RetrieveOrderInformation"/>
+  <ns1:parameter name="wsdlServicePort" value="RetrieveOrderInformation"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="RetrieveOrderInformationService"/>
   <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns4:Order" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:main.Order" xmlns:ns4="http://main"/>
@@ -66,68 +66,81 @@
    <ns1:parameter qname="ns5:newOrderStatus" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="updateOrder"/>
-  <ns1:parameter name="wsdlPortType" value="UpdateOrderInformation"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://main"/>
-  <ns1:parameter name="wsdlServicePort" value="UpdateOrderInformation"/>
+  <ns1:parameter name="wsdlPortType" value="UpdateOrderInformation"/>
   <ns1:parameter name="className" value="main.UpdateOrderInformation"/>
+  <ns1:parameter name="wsdlServicePort" value="UpdateOrderInformation"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="UpdateOrderInformationService"/>
  </ns1:service>
+ <ns1:service name="StockInfo" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getStockInformation" qname="ns6:getStockInformation" returnQName="ns6:getStockInformationReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:in0" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getStockInformation"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="StockInfo"/>
+  <ns1:parameter name="className" value="main.StockInfo"/>
+  <ns1:parameter name="wsdlServicePort" value="StockInfo"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
+  <ns1:parameter name="wsdlServiceElement" value="StockInfoService"/>
+ </ns1:service>
  <ns1:service name="InsertOrderInformation" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="setOrderInformation" qname="ns6:setOrderInformation" returnQName="ns6:setOrderInformationReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns6:orderDate" type="xsd:string"/>
-   <ns1:parameter qname="ns6:totalAmount" type="xsd:string"/>
-   <ns1:parameter qname="ns6:orderStatus" type="xsd:string"/>
+  <ns1:operation name="setOrderInformation" qname="ns7:setOrderInformation" returnQName="ns7:setOrderInformationReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:orderDate" type="xsd:string"/>
+   <ns1:parameter qname="ns7:totalAmount" type="xsd:string"/>
+   <ns1:parameter qname="ns7:orderStatus" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="setOrderInformation"/>
-  <ns1:parameter name="wsdlPortType" value="InsertOrderInformation"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://main"/>
-  <ns1:parameter name="wsdlServicePort" value="InsertOrderInformation"/>
+  <ns1:parameter name="wsdlPortType" value="InsertOrderInformation"/>
   <ns1:parameter name="className" value="main.InsertOrderInformation"/>
+  <ns1:parameter name="wsdlServicePort" value="InsertOrderInformation"/>
+  <ns1:parameter name="schemaQualified" value="http://main"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="InsertOrderInformationService"/>
  </ns1:service>
  <ns1:service name="SignupService" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="signUp" qname="ns7:signUp" returnQName="ns7:signUpReturn" returnType="xsd:boolean" soapAction="" xmlns:ns7="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns7:username" type="xsd:string"/>
-   <ns1:parameter qname="ns7:password" type="xsd:string"/>
-   <ns1:parameter qname="ns7:email" type="xsd:string"/>
+  <ns1:operation name="signUp" qname="ns8:signUp" returnQName="ns8:signUpReturn" returnType="xsd:boolean" soapAction="" xmlns:ns8="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:username" type="xsd:string"/>
+   <ns1:parameter qname="ns8:password" type="xsd:string"/>
+   <ns1:parameter qname="ns8:email" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="signUp"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="SignupService"/>
-  <ns1:parameter name="className" value="main.SignupService"/>
-  <ns1:parameter name="wsdlServicePort" value="SignupService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="SignupService"/>
+  <ns1:parameter name="className" value="main.SignupService"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="SignupServiceService"/>
  </ns1:service>
  <ns1:service name="Info" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="main" qname="ns8:main" soapAction="" xmlns:ns8="http://main">
-   <ns1:parameter qname="ns8:args" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="main" qname="ns9:main" soapAction="" xmlns:ns9="http://main">
+   <ns1:parameter qname="ns9:args" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="main"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="Info"/>
-  <ns1:parameter name="className" value="main.Info"/>
-  <ns1:parameter name="wsdlServicePort" value="Info"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="Info"/>
+  <ns1:parameter name="className" value="main.Info"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="InfoService"/>
  </ns1:service>
  <ns1:service name="LoginService" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="login" qname="ns9:login" returnQName="ns9:loginReturn" returnType="xsd:boolean" soapAction="" xmlns:ns9="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns9:email" type="xsd:string"/>
-   <ns1:parameter qname="ns9:password" type="xsd:string"/>
+  <ns1:operation name="login" qname="ns10:login" returnQName="ns10:loginReturn" returnType="xsd:boolean" soapAction="" xmlns:ns10="http://main" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:email" type="xsd:string"/>
+   <ns1:parameter qname="ns10:password" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="login"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="LoginService"/>
-  <ns1:parameter name="className" value="main.LoginService"/>
-  <ns1:parameter name="wsdlServicePort" value="LoginService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://main"/>
+  <ns1:parameter name="wsdlServicePort" value="LoginService"/>
+  <ns1:parameter name="className" value="main.LoginService"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://main"/>
   <ns1:parameter name="wsdlServiceElement" value="LoginServiceService"/>
  </ns1:service>

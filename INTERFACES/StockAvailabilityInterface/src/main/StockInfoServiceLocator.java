@@ -1,5 +1,5 @@
 /**
- * ViewAllOrdersServiceLocator.java
+ * StockInfoServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package main;
 
-public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service implements main.ViewAllOrdersService {
+public class StockInfoServiceLocator extends org.apache.axis.client.Service implements main.StockInfoService {
 
-    public ViewAllOrdersServiceLocator() {
+    public StockInfoServiceLocator() {
     }
 
 
-    public ViewAllOrdersServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public StockInfoServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public ViewAllOrdersServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public StockInfoServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for ViewAllOrders
-    private java.lang.String ViewAllOrders_address = "http://localhost:8080/ECommerceWebsiteProject/services/ViewAllOrders";
+    // Use to get a proxy class for StockInfo
+    private java.lang.String StockInfo_address = "http://localhost:8080/ECommerceWebsiteProject/services/StockInfo";
 
-    public java.lang.String getViewAllOrdersAddress() {
-        return ViewAllOrders_address;
+    public java.lang.String getStockInfoAddress() {
+        return StockInfo_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String ViewAllOrdersWSDDServiceName = "ViewAllOrders";
+    private java.lang.String StockInfoWSDDServiceName = "StockInfo";
 
-    public java.lang.String getViewAllOrdersWSDDServiceName() {
-        return ViewAllOrdersWSDDServiceName;
+    public java.lang.String getStockInfoWSDDServiceName() {
+        return StockInfoWSDDServiceName;
     }
 
-    public void setViewAllOrdersWSDDServiceName(java.lang.String name) {
-        ViewAllOrdersWSDDServiceName = name;
+    public void setStockInfoWSDDServiceName(java.lang.String name) {
+        StockInfoWSDDServiceName = name;
     }
 
-    public main.ViewAllOrders getViewAllOrders() throws javax.xml.rpc.ServiceException {
+    public main.StockInfo getStockInfo() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(ViewAllOrders_address);
+            endpoint = new java.net.URL(StockInfo_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getViewAllOrders(endpoint);
+        return getStockInfo(endpoint);
     }
 
-    public main.ViewAllOrders getViewAllOrders(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public main.StockInfo getStockInfo(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            main.ViewAllOrdersSoapBindingStub _stub = new main.ViewAllOrdersSoapBindingStub(portAddress, this);
-            _stub.setPortName(getViewAllOrdersWSDDServiceName());
+            main.StockInfoSoapBindingStub _stub = new main.StockInfoSoapBindingStub(portAddress, this);
+            _stub.setPortName(getStockInfoWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
         }
     }
 
-    public void setViewAllOrdersEndpointAddress(java.lang.String address) {
-        ViewAllOrders_address = address;
+    public void setStockInfoEndpointAddress(java.lang.String address) {
+        StockInfo_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (main.ViewAllOrders.class.isAssignableFrom(serviceEndpointInterface)) {
-                main.ViewAllOrdersSoapBindingStub _stub = new main.ViewAllOrdersSoapBindingStub(new java.net.URL(ViewAllOrders_address), this);
-                _stub.setPortName(getViewAllOrdersWSDDServiceName());
+            if (main.StockInfo.class.isAssignableFrom(serviceEndpointInterface)) {
+                main.StockInfoSoapBindingStub _stub = new main.StockInfoSoapBindingStub(new java.net.URL(StockInfo_address), this);
+                _stub.setPortName(getStockInfoWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("ViewAllOrders".equals(inputPortName)) {
-            return getViewAllOrders();
+        if ("StockInfo".equals(inputPortName)) {
+            return getStockInfo();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://main", "ViewAllOrdersService");
+        return new javax.xml.namespace.QName("http://main", "StockInfoService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://main", "ViewAllOrders"));
+            ports.add(new javax.xml.namespace.QName("http://main", "StockInfo"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class ViewAllOrdersServiceLocator extends org.apache.axis.client.Service 
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("ViewAllOrders".equals(portName)) {
-            setViewAllOrdersEndpointAddress(address);
+if ("StockInfo".equals(portName)) {
+            setStockInfoEndpointAddress(address);
         }
         else 
 { // Unknown Port Name
